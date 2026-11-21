@@ -6,6 +6,8 @@ Extends the [rv32i-single-cycle-core](https://github.com/Ana2601/rv32i-single-cy
 RISC-V's reserved **CUSTOM-0** opcode space (0x0B), demonstrating the
 standard path for adding application-specific ISA extensions.
 
+![Architecture](docs/diagrams/architecture.svg)
+
 ## The custom instruction
 
 | mnemonic | encoding                          | semantics           |
@@ -60,13 +62,18 @@ run_sim.sh / Makefile    one-command flow
 ./run_sim.sh
 ```
 
-
 ## Next (FPGA host)
 
 - Re-express the accelerator as a **CV-X-IF** coprocessor (vendor-neutral
   tightly-coupled-accelerator interface) and verify on M1.
 - Take the CV-X-IF platform to build on **CVA6 / Alveo U250** (official
   X-interface platform) for a real-hardware demonstration.
+
+## Test run
+
+Output of the CI command (`./run_sim.sh`), captured from a local run:
+
+![Test run](docs/screenshots/test_run.svg)
 
 ## Setup
 
